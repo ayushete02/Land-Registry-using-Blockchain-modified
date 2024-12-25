@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const UserDetails = require("../models/userDetails");
-// const sendMessage = require("../utils/sendMessage");
+const sendMessage = require("../utils/sendMessage");
 
 router.post("/sendOtp", async (req, res) => {
   if (!req.body.aadharNo) {
@@ -23,7 +23,7 @@ router.post("/sendOtp", async (req, res) => {
 
     const otp = Math.floor(100000 + Math.random() * 900000);
 
-    // await sendMessage("+91"+user_details.phoneNo, otp)
+    await sendMessage("+91" + user_details.phoneNo, otp);
 
     user_details.otp = otp;
     user_details.otpValidTill = Date.now() + 15 * 60 * 1000; // 15 minutes
