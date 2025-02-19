@@ -1,176 +1,149 @@
-# Land Registry using Blockchain Technology
+# Land Registry Using Blockchain Technology
 
-"LandChain" refers to a blockchain-based system or platform specifically designed for land registry and property management purposes. It utilizes the power of blockchain technology to create a decentralized and transparent network that securely records and manages information related to land ownership, transfers, and other relevant data.
+This project implements a decentralized land registry system using smart contracts deployed on the Binance Smart Chain (BSC) testnet. Below is an overview of the platform, important features, and setup instructions, along with a detailed user flow.
 
-Land Registry Contract (Polygon MATIC)
-https://mumbai.polygonscan.com/token/0xb249741c5d024c9bf0cb1cc93a8d4b804a2058c1
-
-Land Registry Contract (Mantle)
-
-Contract: 0x28534cA9020cECfdd16562e94bc6DB8068c54f26
-
-
-<hr/>
-
-[![](https://i.ibb.co/7kYR0v5/Screenshot-33-4.png)](https://drive.google.com/file/d/1bv5WtchpeXeUhgCLp_MkK_D5y3MDDslU/view?usp=drivesdk)
-[![](https://i.ibb.co/0t4bgFn/FVB.png)](https://docs.google.com/presentation/d/1cKM_Lj1ICXoLxDkfO0pRdZ3C4GZ9Oxi0/edit?usp=drivesdk&ouid=101748959506220961092&rtpof=true&sd=true)
-
-<hr/>
-
-[Step Demonstration](https://github.com/ayushete02/Land-Registry-using-Blockchain-Technology/blob/main/Demonstration/Readme.md) | [Spheron](https://land-registry-using-blockchain-technology-b25ef7.spheron.app/)
-
-<hr/>
-
-## Introduction
-
-In a LandChain system, each transaction or update related to land records is recorded on the blockchain, forming an immutable and tamper-proof history of ownership. This ensures increased transparency, reduces the potential for fraud, and enhances trust in the land registry process.
-
-LandChain can provide benefits such as streamlined property transactions, efficient verification of land ownership, improved dispute resolution, and easier access to accurate and up-to-date land records. It aims to revolutionize the traditional
+---
 
 ## Table of Contents
+1. [Project Overview](#project-overview)  
+2. [Features](#features)  
+3. [Tech Stack](#tech-stack)  
+4. [Prerequisites](#prerequisites)  
+5. [Connecting to BNB Testnet](#connecting-to-bnb-testnet)  
+6. [Using the Deployed Contracts](#using-the-deployed-contracts)  
+7. [User Flow](#user-flow)  
+8. [Common Issues](#common-issues)  
+9. [Contributing](#contributing)
 
-- [Inspiration](#inspiration)
+---
 
-- [What it does](#what-it-does)
+## Project Overview
+- **Objective**: Provide a transparent, immutable record of land ownership, allowing users to register new lands and transfer ownership via smart contracts.  
+- **Scope**: Designed for demonstration on the BSC testnet but could be adapted to other EVM-compatible networks.  
 
-- [Features](#Features)
-
-- [Built with](#Built-with)
-
-- [How we built it](#how-we-built-it)
-
-- [Challenges we ran into](#challenges-we-ran-into)
-
-- [Accomplishments that we're proud of](#challenges-we-ran-into)
-
-- [What we learned](#what-we-learned)
-
-- [What's next for LandChain](#what-we-learned)
-
-- [Installation](#Installation)
-
-
-## Inspiration
-
-"LandChain" refers to a blockchain-based system or platform specifically designed for land registry and property management purposes. It utilizes the power of blockchain technology to create a decentralized and transparent network that securely records and manages information related to land ownership, transfers, and other relevant data.
-
-## What it does
-
-In a LandChain system, each transaction or update related to land records is recorded on the blockchain, forming an immutable and tamper-proof history of ownership. This ensures increased transparency, reduces the potential for fraud, and enhances trust in the land registry process.
+---
 
 ## Features
+1. **Immutable Records**: Land ownership updates are logged permanently on-chain.  
+2. **Automated Ownership Transfer**: Once confirmed in Metamask, the smart contract updates ownership details.  
+3. **Verifiable Transactions**: Each transaction is indexed on the BSC testnet explorer, ensuring transparency.  
 
-- Land registration: Register new land parcels with relevant details such as owner information, location, and boundaries.
+---
 
-- Transfer of ownership: Facilitate the transfer of land ownership from one party to another.
+## Tech Stack
 
-- Immutable records: All land transactions are recorded on the blockchain, ensuring transparency and tamper-proof records.
+### 1. Blockchain Network
+- **Binance Smart Chain (BSC) Testnet**  
+  - Chosen for its compatibility with Ethereum tooling (EVM) and lower gas costs compared to Ethereum mainnet.  
+  - Allows developers to experiment with real smart contract deployment without incurring high fees.
 
-- Smart contracts: Utilize smart contracts to enforce business logic and automate processes.
+### 2. Smart Contracts
+- **Solidity**  
+  - Primary language used for writing contracts.  
+  - Contains functions for registering land, transferring ownership, and retrieving records.  
+- **Already Deployed**  
+  - The contracts have been deployed on the BSC testnet.  
+  - You can view the main contract here:  
+    [Smart Contract on BSC Testnet](https://testnet.bscscan.com/address/REPLACE_WITH_DEPLOYED_CONTRACT_ADDRESS)
 
-## Built with
+### 3. Frontend
+- **React or Next.js** (depending on your setup)  
+  - Delivers the user-facing interface for land registration and ownership transfers.  
+  - Communicates with the smart contract using libraries like `web3.js` or `ethers.js`.  
 
-- `Polygon`
+### 4. Tools & Libraries
+- **Node.js & npm (or Yarn)**  
+  - Manage dependencies and run local development servers.  
+- **Metamask**  
+  - Browser extension that handles wallet connections and user transactions.  
+- **BSC Testnet Explorer** (e.g., [testnet.bscscan.com](https://testnet.bscscan.com/))  
+  - Verification tool for viewing transaction details and confirming contract interactions.  
 
-- `Lighthouse`
+### 5. Why BSC, Not Polygon (Mumbai)?  
+- The Mumbai (Polygon) testnet may have certain constraints or deprecations.  
+- BSC testnet offers a stable environment, similar developer experience, and low-cost transactions.
 
-- `Tableland`
+---
 
-- `Push Protocol`
+## Prerequisites
+1. **Node.js (v14+)**  
+2. **npm or Yarn**  
+3. **Metamask** installed and configured for the BSC testnet.  
+4. **BNB test tokens** in your wallet for gas fees (available via a faucet).  
 
-- `XMTP Protocol`
+---
 
-- `Huddle`
+## Connecting to BNB Testnet
+1. **Add BSC Testnet to Metamask**  
+   - Open Metamask → Add Network → Enter BSC testnet details (RPC URL, chain ID, etc.).  
+2. **Check Balance**  
+   - Use a faucet (search “BNB testnet faucet”) to get test BNB.  
 
-- `Metamask`
+---
 
-- `Spheron`
-
-
-## How we built it
-
-The LandChain system was built using a combination of blockchain technology and smart contracts. We utilized a suitable blockchain platform, such as Ethereum or Hyperledger, to create a decentralized network for recording and managing land registry data.
-
-Smart contracts were developed to define the rules and logic governing the land transactions and updates. These contracts automatically execute predefined actions based on specified conditions, ensuring the accuracy and integrity of the land registry process.
-
-The system also involved the development of user interfaces and APIs to facilitate interactions between users and the LandChain platform. These interfaces provided a seamless experience for users to query land records, initiate transactions, and view historical data.
-
-## Challenges we ran into
-
-During the development of LandChain, we faced several challenges. One major challenge was ensuring the scalability and performance of the blockchain network, especially when dealing with a large number of land transactions and concurrent users. We employed various optimization techniques and explored different consensus algorithms to address this issue.
-
-Another challenge was integrating the LandChain system with existing land registry processes and legal frameworks. We had to carefully analyze and align our solution with the regulatory requirements and ensure compliance with local land ownership laws.
-
-## Accomplishments that we're proud of
-
-We are proud to have successfully developed a functional LandChain system that addresses the critical issues in land registry and property management. Our system provides a transparent and secure platform for recording land transactions, which helps prevent fraud and enhances trust in the land registry process.
-
-We have also achieved seamless integration with existing land registry processes, allowing users to transition smoothly to the LandChain platform without disrupting their current operations.
-
-## What we learned
-
-While building LandChain, we gained valuable insights into the potential of blockchain technology for land registry and property management. We learned about the unique benefits it offers, such as increased transparency, immutability, and decentralized control.
-
-We also acquired knowledge about the challenges and complexities involved in implementing blockchain solutions in real-world scenarios. These learnings will guide us in developing more robust and efficient blockchain-based systems in the future.
-
-## What's next for LandChain
-
-In a LandChain system, each transaction or update related to land records is recorded on the blockchain, forming an immutable and tamper-proof history of ownership. This ensures increased transparency, reduces the potential for fraud, and enhances trust in the land registry process.
-
-LandChain can provide benefits such as streamlined property transactions, efficient verification of land ownership, improved dispute resolution, and easier access to accurate and up-to-date land records. It aims to revolutionize the traditional.
-
-Some of our future plans include:
-
-- Implementing a governance model to ensure collective decision-making and consensus among network participants.
-
-- Exploring interoperability with other blockchain networks or land registry systems to enable seamless data exchange.
-
-- Incorporating advanced data analytics and visualization tools to provide valuable insights and trends related to land ownership and transactions.
-
-- Collaborating with government agencies and regulatory bodies to establish standards and legal frameworks for blockchain-based land registries.
-
-- Expanding the LandChain network globally, enabling land transactions and management on an international scale
-
-## Installation
-
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/your-username/Land-Registry-using-Blockchain-Technology.git
-   ```
-
-2. Install the project dependencies:
-
-   ```shell
-   cd Land-Registry-using-Blockchain-Technology
+## Using the Deployed Contracts
+1. **Obtain Deployed Contract Address & ABI**  
+   - Update your frontend configuration to reference the correct address and ABI.  
+2. **Run the Frontend**  
+   ```bash
    npm install
+   npm start
    ```
+   - Visit `http://localhost:3000` in your browser (or whichever port is configured).  
+3. **Interact with Contracts**  
+   - Metamask automatically prompts you to sign transactions and pay gas in test BNB.
 
-3. Configure Metamask:
+---
 
-   - Install the Metamask extension in your browser.
+## User Flow
 
-   - Connect Metamask to a local blockchain network (e.g., Ganache) using the provided RPC URL.
+1. **Connect Wallet**
+   - **Open the App**: Launch the web interface in your browser.  
+   - **Select BNB Testnet Network** in Metamask.  
+   - **Click “Connect Wallet”**: Approve the connection request in Metamask.
 
-4. Compile and deploy the smart contracts:
+2. **Register Land**
+   - **Go to “Register Land”**: Provide details such as land title, location, and your wallet address.  
+   - **Submit & Confirm**: Clicking “Register” triggers a smart contract transaction. Approve via Metamask.  
+   - **Result**: Land record is created on-chain; you receive a transaction hash.
 
-   ```shell
-   truffle compile
-   truffle migrate
-   ```
+3. **View Registered Lands**
+   - **My Lands**: See a list of lands owned by your connected wallet.  
+   - **Details**: Click on any entry to view land info, transaction history, and owner data on the BSC explorer.
+
+4. **Transfer Ownership**
+   - **Select Land**: Choose a land you already own.  
+   - **Enter New Owner**: Specify the wallet address of the recipient.  
+   - **Initiate Transaction**: Approve in Metamask.  
+   - **Ownership Update**: The new owner can then see this land when connected with their wallet.
+
+5. **Explore Transactions**
+   - **Transaction Hash**: Provided after each successful operation.  
+   - **Check on BSC Testnet Explorer**: Confirm that the transaction is successful and the block number is updated.
+
+6. **Additional Operations (If Available)**
+   - **Update Land Info**: If the contract allows, you may edit certain metadata with another blockchain transaction.  
+   - **Archive/Remove Land**: In some designs, land can be marked inactive; however, permanent removal is not typical on-chain.
+
+---
+
+## Common Issues
+- **Metamask Connection**: Ensure the testnet is properly configured in Metamask.  
+- **Insufficient Test BNB**: Use a testnet faucet to top up.  
+- **Incorrect Contract Address**: Double-check your config if you’re not seeing expected data.  
+- **Frontend Not Syncing**: Verify your environment variables and contract ABI match the deployed version.
+
+---
 
 ## Contributing
+1. **Fork the Repository**: Create your own copy on GitHub.  
+2. **Create a New Branch**: For any feature or bug fix.  
+3. **Push Changes and Submit a Pull Request**: Provide a clear description of your updates.  
 
-Contributions to this project are welcome. To contribute, follow these steps:
+For questions or feedback, please open an [issue](https://github.com/<your-username>/Land-Registry-using-Blockchain-modified/issues).  
 
-1. Fork the repository.
+---
 
-2. Create a new branch.
-
-3. Make your modifications.
-
-4. Commit and push your changes.
-
-5. Submit a pull request.
+**Happy Building!**
 
 
