@@ -44,7 +44,10 @@ This project implements a decentralized land registry system using smart contrac
 - **Already Deployed**  
   - The contracts have been deployed on the BSC testnet.  
   - You can view the main contract here:  
-    [Smart Contract on BSC Testnet](https://testnet.bscscan.com/address/REPLACE_WITH_DEPLOYED_CONTRACT_ADDRESS)
+  
+    [Payment Smart Contract on BSC Testnet](https://testnet.bscscan.com/address/0x98Fa81BFea72C4601737D4a49E7fa2d7Ca387398)
+
+    [NFT Smart Contract on BSC Testnet](https://testnet.bscscan.com/address/0xc966A5689CD9677aC1bF7CaC240397f4A20c1E4e)
 
 ### 3. Frontend
 - **React or Next.js** (depending on your setup)  
